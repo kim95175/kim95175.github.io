@@ -1,0 +1,65 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+// import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from 'next/link';
+
+import matter from 'gray-matter';
+
+// import remarkSmartpants from "remark-smartypants";
+// import rehypePrettyCode from "rehype-pretty-code";
+import './markdown.css';
+
+import { readFile, readdir } from 'fs/promises';
+
+export default async function PostPage({ params }: { params: { slug: string } }) {
+  console.log(params.slug);
+
+  const filename = './public/post/' + params.slug + '/index.md';
+  console.log(filename);
+  const file = await readFile(filename, 'utf8');
+
+  // try {
+  //   const postComponents = await import(
+  //     "./public/post/" + params.slug + "/components.tsx"
+  //   );
+  // } catch (e) {
+  //   console.log(e);
+  // }
+  const { content, data } = matter(file);
+  console.log(data);
+  const editUrl = `https://github.com/kim95175/kim95175.github.io/main/public/post/${encodeURIComponent(
+    params.slug,
+  )}/index.md`;
+  return (
+    <article>
+      <h1 className="text-[40px] font-black leading-[44px]">{data.title}</h1>
+      <p className="mt-2 text-[13px] text-gray-700 dark:text-gray-300">
+        {new Date(data.date).toLocaleDateString('en', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </p>
+      <div className="markdown mt-10">
+        {content}
+        <p>
+          <Link href={editUrl}>Edit on GitHub</Link>
+        </p>
+      </div>
+    </article>
+  );
+}
+
+export async function generateStaticParams() {
+  const entries = await readdir('./public/post/', { withFileTypes: true });
+  const dirs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+  return dirs.map((dir) => ({ slug: dir }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const file = await readFile('./public/post/' + params.slug + '/index.md', 'utf8');
+  const { data } = matter(file);
+  return {
+    title: data.title + ' — overreacted',
+    description: data.spoiler,
+  };
+}

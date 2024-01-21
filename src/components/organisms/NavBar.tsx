@@ -1,4 +1,4 @@
-import Logo from "@components/atoms/logo/Logo";
+import Logo from '@components/atoms/logo/Logo';
 
 const NavBar = () => {
   return (
@@ -8,7 +8,7 @@ const NavBar = () => {
       </div>
       <div>by kim95175</div>
     </div>
-  )
-}
+  );
+};
 
 export default NavBar;

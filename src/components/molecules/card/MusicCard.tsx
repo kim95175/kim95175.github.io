@@ -44,7 +44,7 @@ const MusicCard = ({ title, artist, cover }: MusicCardProps) => {
               </g>
             </svg>
           </button>
-          <Link href="/main" className='mx-4'>
+          <Link href="/main" className="mx-4">
             <span className="relative flex">
               <span className="absolute animate-ping inline-flex rounded-full w-full h-full border border-primary200" />
               <span className="relative">
@@ -84,7 +84,7 @@ const MusicCard = ({ title, artist, cover }: MusicCardProps) => {
           <span>3:53</span>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

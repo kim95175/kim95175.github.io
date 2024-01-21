@@ -6,8 +6,8 @@ import '@styles/globals.css';
 import { cls } from '@utils/utils';
 
 export const metadata: Metadata = {
-  title: 'kim95175',
-  description: 'LOSETTA',
+  title: 'Archive by kim95175',
+  description: 'A',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
