@@ -1,54 +1,31 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
-
+"use client";
+/* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import Link from 'next/link';
 
-import matter from 'gray-matter';
+// import { getPosts } from '@apis/mdx/getPosts';
+import { useEffect, useState } from 'react';
 
-import { readFile, readdir } from 'fs/promises';
+import type { Post } from '@models/post';
 
-export const metadata = {
-  title: 'archive blog',
-  description: 'frontend post',
-};
 
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  spoiler: string;
-}
+export default function HomePage() {
+  const [posts, setPosts] = useState<Post[]>();
+  async function fetchPosts() {
+    const response = await fetch('/api/posts');
+    const responseJson = await response.json();
 
-export async function getPosts() {
-  const entries = await readdir('./public/post/', { withFileTypes: true });
-  const dirs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
-  const fileContents = await Promise.all(
-    dirs.map(async (dir) => await readFile('./public/post/' + dir + '/index.md', 'utf8')),
-  );
-  const posts = dirs.map((slug, i) => {
-    const fileContent = fileContents[i];
-    const { data } = matter(fileContent);
-    return { slug, ...data } as Post;
-  });
-  // posts.sort((a, b) => {
-  //   return Date.parse(a.date) < Date.parse(b.date) ? 1 : -1;
-  // });
-  return posts;
-}
+    setPosts(responseJson.data);
+  }
 
-export async function getStaticProps() {
-  const posts = await getPosts();
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
-export default function HomePage({ posts }: { posts: Post[] }) {
   return (
     <div className="relative -top-[10px] flex flex-col gap-8">
-      {posts.map((post) => (
+      {posts?.map((post) => (
         <Link
           key={post.slug}
           className="block py-4 hover:scale-[1.005]"

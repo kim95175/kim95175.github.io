@@ -1,0 +1,29 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+import matter from 'gray-matter';
+
+import { readFile, readdir } from 'fs/promises';
+import type { Post } from "@models/post";
+import { NextResponse } from 'next/server';
+
+async function getPosts(): Promise<Post[]> {
+  const entries = await readdir('./public/post/', { withFileTypes: true });
+  const dirs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+  const fileContents = await Promise.all(
+    dirs.map(async (dir) => await readFile('./public/post/' + dir + '/index.md', 'utf8')),
+  );
+  const posts = dirs.map((slug, i) => {
+    const fileContent = fileContents[i];
+    const { data } = matter(fileContent);
+    return { slug, ...data } as Post;
+  });
+  return posts;
+}
+
+export async function GET(req: Request) {
+  try {
+    const posts = await getPosts();
+    return NextResponse.json({ data: posts });
+  } catch (error) {
+    throw new Error(error);
+  }
+}

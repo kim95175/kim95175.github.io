@@ -11,10 +11,8 @@ import './markdown.css';
 import { readFile, readdir } from 'fs/promises';
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  console.log(params.slug);
 
   const filename = './public/post/' + params.slug + '/index.md';
-  console.log(filename);
   const file = await readFile(filename, 'utf8');
 
   // try {
