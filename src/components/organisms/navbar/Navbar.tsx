@@ -1,14 +1,17 @@
+import Link from 'next/link';
 import Logo from '@components/atoms/logo/Logo';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <div className="flex justify-between items-baseline">
       <div>
-        <Logo />
+        <Link href="/main">
+          <Logo />
+        </Link>
       </div>
       <div>by kim95175</div>
     </div>
   );
 };
 
-export default NavBar;
+export default Navbar;
