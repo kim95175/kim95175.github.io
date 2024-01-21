@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 
 import '@styles/globals.css';
-import { montserrat, notosans, pressStart, roboto } from '@styles/Fonts';
+import { montserrat, notosans, pressStart } from '@styles/Fonts';
 import { cls } from '@utils/utils';
 
 
