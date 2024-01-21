@@ -10,6 +10,8 @@ const config: Config = {
         baseContent: 'var(--baseContent)',
         primary100: 'var(--primary100)',
         primary200: 'var(--primary200)',
+        secondary100: 'var(--secondary100)',
+        secondary200: 'var(--secondary200)',
         accent100: 'var(--accent100)',
         accent200: 'var(--accent200)',
       },

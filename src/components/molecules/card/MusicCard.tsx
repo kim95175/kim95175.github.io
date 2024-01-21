@@ -46,7 +46,7 @@ const MusicCard = ({ title, artist, cover }: MusicCardProps) => {
           </button>
           <Link href="/main" className='mx-4'>
             <span className="relative flex">
-              <span className="absolute animate-ping inline-flex rounded-full w-full h-full border border-primary100" />
+              <span className="absolute animate-ping inline-flex rounded-full w-full h-full border border-primary200" />
               <span className="relative">
                 <PauseButton />
               </span>
