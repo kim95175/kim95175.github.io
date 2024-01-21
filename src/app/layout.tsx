@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import React from 'react';
 
-import '@styles/globals.css';
 import { montserrat, notosans, pressStart } from '@styles/Fonts';
+import '@styles/globals.css';
 import { cls } from '@utils/utils';
-
 
 export const metadata: Metadata = {
   title: 'kim95175',
