@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
+import { NextResponse } from 'next/server';
+
 import matter from 'gray-matter';
 
+import type { Post } from '@models/post';
+
 import { readFile, readdir } from 'fs/promises';
-import type { Post } from "@models/post";
-import { NextResponse } from 'next/server';
 
 async function getPosts(): Promise<Post[]> {
   const entries = await readdir('./public/post/', { withFileTypes: true });

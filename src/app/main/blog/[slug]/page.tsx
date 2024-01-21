@@ -1,27 +1,25 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-// import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
 
 import matter from 'gray-matter';
-
-// import remarkSmartpants from "remark-smartypants";
-// import rehypePrettyCode from "rehype-pretty-code";
+import rehypePrettyCode from 'rehype-pretty-code';
+import remarkSmartypants from 'remark-smartypants';
+import { remarkMdxEvalCodeBlock } from "./mdx";
 import './markdown.css';
 
 import { readFile, readdir } from 'fs/promises';
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-
   const filename = './public/post/' + params.slug + '/index.md';
   const file = await readFile(filename, 'utf8');
 
-  // try {
-  //   const postComponents = await import(
-  //     "./public/post/" + params.slug + "/components.tsx"
-  //   );
-  // } catch (e) {
-  //   console.log(e);
-  // }
+  let postComponents = {};
+  try {
+    postComponents = await import('../../../../../public/post/' + params.slug + '/components.tsx');
+  } catch (e) {
+    throw new Error('No components.tsx found');
+  }
   const { content, data } = matter(file);
   const editUrl = `https://github.com/kim95175/kim95175.github.io/tree/main/public/post/${encodeURIComponent(
     params.slug,
@@ -37,7 +35,26 @@ export default async function PostPage({ params }: { params: { slug: string } })
         })}
       </p>
       <div className="markdown mt-10">
-        {content}
+        <MDXRemote
+          source={content}
+          components={{
+            ...postComponents,
+          }}
+          options={{
+            mdxOptions: {
+              useDynamicImport: true,
+              remarkPlugins: [
+                remarkSmartypants,
+                [remarkMdxEvalCodeBlock, filename]
+              ],
+              rehypePlugins: [
+                [
+                  rehypePrettyCode,
+                ],
+              ],
+            },
+          }}
+        />
         <p>
           <Link href={editUrl}>Edit on GitHub</Link>
         </p>
@@ -56,7 +73,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const file = await readFile('./public/post/' + params.slug + '/index.md', 'utf8');
   const { data } = matter(file);
   return {
-    title: data.title + ' — overreacted',
+    title: data.title + ' — archvie',
     description: data.spoiler,
   };
 }

@@ -1,14 +1,13 @@
-"use client";
+'use client';
+
 /* eslint-disable @typescript-eslint/no-floating-promises */
+
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-
 import Link from 'next/link';
-
 // import { getPosts } from '@apis/mdx/getPosts';
 import { useEffect, useState } from 'react';
 
 import type { Post } from '@models/post';
-
 
 export default function BlogPage() {
   const [posts, setPosts] = useState<Post[]>();

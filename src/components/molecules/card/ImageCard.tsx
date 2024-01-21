@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface ImageCardProps {
   image: string;
@@ -11,7 +11,6 @@ interface ImageCardProps {
 const ImageCard = ({ image, title, description, link }: ImageCardProps) => {
   return (
     <Link href={link}>
-
       <div className="relative flex flex-col justify-center overflow-hidden bg-gray-50">
         <div className="absolute inset-0 bg-center"></div>
         <div className="group relative m-0 flex h-56 w-72 rounded-xl shadow-xl ring-gray-900/5 sm:mx-auto sm:max-w-lg">
@@ -30,7 +29,7 @@ const ImageCard = ({ image, title, description, link }: ImageCardProps) => {
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
 export default ImageCard;

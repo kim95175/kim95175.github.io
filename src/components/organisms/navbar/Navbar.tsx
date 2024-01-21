@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import Logo from '@components/atoms/logo/Logo';
 
 const Navbar = () => {

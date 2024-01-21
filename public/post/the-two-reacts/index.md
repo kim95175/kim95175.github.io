@@ -22,7 +22,7 @@ First, I'll argue that components should run on _your_ computer.
 
 Here's a little counter button to demonstrate interactivity. Click it a few times!
 
-```js
+```tsx
 <Counter />
 ```
 
@@ -36,7 +36,7 @@ Assuming the JavaScript code for this component has already loaded, the number w
 
 This is possible because this component's code is running on _your_ computer:
 
-```js
+```tsx
 import { useState } from 'react';
 
 export function Counter() {
@@ -72,13 +72,13 @@ Next, I'll argue the opposite--that components should run on _my_ computer.
 
 Here's a preview card for a different post from this blog:
 
-```js
-<PostPreview slug="a-chain-reaction" />
+```tsx
+<PostPreview slug="the-two-reacts" />
 ```
 
 ```js eval
 <div className="mb-8">
-  <PostPreview slug="a-chain-reaction" />
+  <PostPreview slug="the-two-reacts" />
 </div>
 ```
 
@@ -88,7 +88,7 @@ If you check the Network tab, you'll see no extra requests. I'm not downloading 
 
 So how does this component work?
 
-```js
+```tsx
 import matter from 'gray-matter';
 
 import { readFile } from 'fs/promises';
@@ -101,9 +101,7 @@ export async function PostPreview({ slug }) {
   return (
     <section className="rounded-md bg-black/5 p-2">
       <h5 className="font-bold">
-        <a href={'/' + slug} target="_blank">
-          {data.title}
-        </a>
+        {data.title}
       </h5>
       <i>{wordCount} words</i>
     </section>
@@ -117,7 +115,7 @@ Suppose I wanted to list _all_ the posts on my blog along with their word counts
 
 Easy:
 
-```js
+```tsx
 <PostList />
 ```
 
@@ -127,7 +125,7 @@ Easy:
 
 All I needed to do was to render a `<PostPreview />` for every post folder:
 
-```js
+```tsx
 import { PostPreview } from './post-preview';
 
 import { readdir } from 'fs/promises';
@@ -147,7 +145,7 @@ export async function PostList() {
 
 None of this code needed to run on your computer--and indeed _it couldn't_ because your computer doesn't have my files. Let's check _when_ this code ran:
 
-```js
+```tsx
 <p className="text-purple-500 font-bold">{new Date().toString()}</p>
 ```
 

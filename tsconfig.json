@@ -1,34 +1,16 @@
 {
   "compilerOptions": {
     "paths": {
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@models/*": [
-        "./src/models/*"
-      ],
-      "@config/*": [
-        "./src/config/*"
-      ],
-      "@styles/*": [
-        "./src/styles/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@contexts/*": [
-        "./src/contexts/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
+      "@components/*": ["./src/components/*"],
+      "@models/*": ["./src/models/*"],
+      "@config/*": ["./src/config/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@hooks/*": ["./src/hooks/*"],
     },
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -46,14 +28,6 @@
       },
     ],
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "out"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "out"],
 }
