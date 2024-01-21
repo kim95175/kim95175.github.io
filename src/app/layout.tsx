@@ -3,10 +3,8 @@ import React from 'react';
 
 import '@styles/globals.css';
 import { montserrat, notosans, pressStart, roboto } from '@styles/Fonts';
+import { cls } from '@utils/utils';
 
-const cls = (...classnames: string[]) => {
-  return classnames.join(' ');
-};
 
 export const metadata: Metadata = {
   title: 'kim95175',
