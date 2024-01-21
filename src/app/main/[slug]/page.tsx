@@ -23,8 +23,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   //   console.log(e);
   // }
   const { content, data } = matter(file);
-  console.log(data);
-  const editUrl = `https://github.com/kim95175/kim95175.github.io/main/public/post/${encodeURIComponent(
+  const editUrl = `https://github.com/kim95175/kim95175.github.io/tree/main/public/post/${encodeURIComponent(
     params.slug,
   )}/index.md`;
   return (
