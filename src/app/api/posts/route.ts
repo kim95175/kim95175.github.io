@@ -24,6 +24,6 @@ export async function GET(req: Request) {
     const posts = await getPosts();
     return NextResponse.json({ data: posts });
   } catch (error) {
-    throw new Error(error);
+    throw new Error(String(error));
   }
 }
