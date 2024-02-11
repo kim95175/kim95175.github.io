@@ -23,7 +23,7 @@ const ImageCard = ({ image, title, description, link }: ImageCardProps) => {
             />
           </div>
           <div className="absolute bottom-0 z-20 m-0 pb-4 ps-4 transition duration-300 ease-in-out group-hover:-translate-y-1 group-hover:translate-x-3 group-hover:scale-110">
-            <h1 className="font-serif text-2xl font-bold text-white shadow-xl">{title}</h1>
+            <h1 className="font-montserrat text-2xl font-bold text-white shadow-xl">{title}</h1>
             <h1 className="text-sm font-light text-gray-200 shadow-xl">{description}</h1>
           </div>
         </div>

@@ -31,7 +31,7 @@ export default function BlogPage() {
           href={'/main/blog/' + post.slug + '/'}
         >
           <article>
-            <h2 className="text-[28px] font-black text-white">{post.title}</h2>
+            <h2 className="text-[28px] font-black text-white font-montserrat">{post.title}</h2>
             <p className="text-[13px] text-gray-700 dark:text-gray-300">
               {new Date(post.date).toLocaleDateString('en', {
                 day: 'numeric',

@@ -18,8 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="/styles/global.css" rel="stylesheet" />
       </head>
       <body
-        className={`${notosans.className}
-        ${cls(montserrat.variable, pressStart.variable)}`}
+        className={`
+        ${cls(montserrat.variable, pressStart.variable, notosans.variable)}`}
       >
         {children}
       </body>
