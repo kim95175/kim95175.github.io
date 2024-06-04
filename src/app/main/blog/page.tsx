@@ -39,7 +39,7 @@ export default function BlogPage() {
                 year: 'numeric',
               })}
             </p>
-            <p className="mt-1">{post.spoiler}</p>;
+            <p className="mt-1">{post.spoiler}</p>
           </article>
         </Link>
       ))}
