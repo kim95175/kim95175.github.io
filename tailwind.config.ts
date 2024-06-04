@@ -1,31 +1,31 @@
 import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
 
+import plugin from 'tailwindcss/plugin';
 
 const Myclass = plugin(function ({ addUtilities }) {
   addUtilities({
-    ".my-rotate-y-180": {
-      transform: "rotateY(180deg)",
+    '.my-rotate-y-180': {
+      transform: 'rotateY(180deg)',
     },
-    ".preserve-3d": {
-      transformStyle: "preserve-3d",
+    '.preserve-3d': {
+      transformStyle: 'preserve-3d',
     },
-    ".card-grid": {
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr 1fr",
-      gridGap: "50px 2vw",
-      transformStyle: "preserve-3d",
-      height: "100%",
-      maxWidth: "1200px",
-      margin: "auto",
-      padding: "50px",
-      position: "relative",
+    '.card-grid': {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr',
+      gridGap: '50px 2vw',
+      transformStyle: 'preserve-3d',
+      height: '100%',
+      maxWidth: '1200px',
+      margin: 'auto',
+      padding: '50px',
+      position: 'relative',
     },
-    ".perspective": {
-      perspective: "1000px",
+    '.perspective': {
+      perspective: '1000px',
     },
-    ".backface-hidden": {
-      backfaceVisibility: "hidden",
+    '.backface-hidden': {
+      backfaceVisibility: 'hidden',
     },
   });
 });
@@ -53,8 +53,8 @@ const config: Config = {
         montserrat: ['var(--montserrat)'],
         pressStart: ['var(--pressStart)'],
         roboto: ['var(--roboto)'],
-        pretendard: ["Pretendard"],
-        sbaggro: ["SBAggro"],
+        pretendard: ['Pretendard'],
+        sbaggro: ['SBAggro'],
       },
     },
   },

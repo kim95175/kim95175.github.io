@@ -28,7 +28,7 @@ export default function BlogPage() {
         <Link
           key={post.slug}
           className="block py-4 hover:scale-[1.005]"
-          href={'/main/blog/' + post.slug + '/'}
+          href={`/main/blog/${post.slug}/`}
         >
           <article>
             <h2 className="text-[28px] font-black text-white font-montserrat">{post.title}</h2>

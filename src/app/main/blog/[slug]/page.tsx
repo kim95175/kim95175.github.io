@@ -1,3 +1,5 @@
+/* eslint-disable import/order */
+
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next/link';
@@ -5,18 +7,19 @@ import Link from 'next/link';
 import matter from 'gray-matter';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkSmartypants from 'remark-smartypants';
-import { remarkMdxEvalCodeBlock } from "./mdx";
+
 import './markdown.css';
+import { remarkMdxEvalCodeBlock } from './mdx';
 
 import { readFile, readdir } from 'fs/promises';
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const filename = './public/post/' + params.slug + '/index.md';
+  const filename = `./public/post/${params.slug}/index.md`;
   const file = await readFile(filename, 'utf8');
 
   let postComponents = {};
   try {
-    postComponents = await import('../../../../../public/post/' + params.slug + '/components.tsx');
+    postComponents = await import(`../../../../../public/post/${params.slug}/components.tsx`);
   } catch (e) {
     throw new Error('No components.tsx found');
   }
@@ -43,15 +46,8 @@ export default async function PostPage({ params }: { params: { slug: string } })
           options={{
             mdxOptions: {
               useDynamicImport: true,
-              remarkPlugins: [
-                remarkSmartypants,
-                [remarkMdxEvalCodeBlock, filename]
-              ],
-              rehypePlugins: [
-                [
-                  rehypePrettyCode,
-                ],
-              ],
+              remarkPlugins: [remarkSmartypants, [remarkMdxEvalCodeBlock, filename]],
+              rehypePlugins: [[rehypePrettyCode]],
             },
           }}
         />
@@ -70,10 +66,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const file = await readFile('./public/post/' + params.slug + '/index.md', 'utf8');
+  const file = await readFile(`/public/post/${params.slug}/index.md`, 'utf8');
   const { data } = matter(file);
   return {
-    title: data.title + ' — archvie',
+    title: `${data.title} — archvie`,
     description: data.spoiler,
   };
 }

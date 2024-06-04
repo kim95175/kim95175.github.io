@@ -5,9 +5,9 @@ const MainPage = () => {
   return (
     <div className="mt-8">
       <div className="flex grid-cols-3 gap-4">
-        {mainMenu.map((menu, index) => (
+        {mainMenu.map((menu) => (
           <ImageCard
-            key={index}
+            key={menu.title}
             image={menu.image}
             title={menu.title}
             description={menu.description}

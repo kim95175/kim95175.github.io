@@ -30,17 +30,17 @@ const MusicCard = ({ title, artist, cover }: MusicCardProps) => {
               xmlns="http://www.w3.org/2000/svg"
               transform="matrix(-1, 0, 0, 1, 0, 0)"
             >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
               <g id="SVGRepo_iconCarrier">
                 <path
                   d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z"
                   fill="#000000"
-                ></path>
+                />
                 <path
                   d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z"
                   fill="#000000"
-                ></path>
+                />
               </g>
             </svg>
           </button>
@@ -61,23 +61,23 @@ const MusicCard = ({ title, artist, cover }: MusicCardProps) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
               <g id="SVGRepo_iconCarrier">
                 <path
                   d="M16.6598 14.6474C18.4467 13.4935 18.4467 10.5065 16.6598 9.35258L5.87083 2.38548C4.13419 1.26402 2 2.72368 2 5.0329V18.9671C2 21.2763 4.13419 22.736 5.87083 21.6145L16.6598 14.6474Z"
                   fill="#000000"
-                ></path>
+                />
                 <path
                   d="M22.75 5C22.75 4.58579 22.4142 4.25 22 4.25C21.5858 4.25 21.25 4.58579 21.25 5V19C21.25 19.4142 21.5858 19.75 22 19.75C22.4142 19.75 22.75 19.4142 22.75 19V5Z"
                   fill="#000000"
-                ></path>
+                />
               </g>
             </svg>
           </button>
         </div>
         <div className="mt-6 bg-gray-200 h-2 rounded-full">
-          <div className="bg-primary200 h-2 rounded-full w-1/2"></div>
+          <div className="bg-primary200 h-2 rounded-full w-1/2" />
         </div>
         <div className="flex justify-between mt-2 text-sm text-gray-600">
           <span>1:57</span>

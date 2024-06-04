@@ -4,11 +4,11 @@ import * as React from 'react';
 
 import { Command as CommandPrimitive } from 'cmdk';
 
-import { type DialogProps } from '@radix-ui/react-dialog';
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-
 import { Dialog, DialogContent } from '@ui/dialog';
 import { cn } from '@utils/utils';
+
+import { type DialogProps } from '@radix-ui/react-dialog';
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 
 /* eslint-disable react/no-unknown-property */
 

@@ -15,7 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="icon" href="/next.svg" sizes="any" />
-        <link href="/styles/global.css" rel="stylesheet" />
       </head>
       <body
         className={`

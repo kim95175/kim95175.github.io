@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Navbar from '@components/organisms/navbar/Navbar';
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {

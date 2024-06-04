@@ -100,9 +100,7 @@ export async function PostPreview({ slug }) {
 
   return (
     <section className="rounded-md bg-black/5 p-2">
-      <h5 className="font-bold">
-        {data.title}
-      </h5>
+      <h5 className="font-bold">{data.title}</h5>
       <i>{wordCount} words</i>
     </section>
   );

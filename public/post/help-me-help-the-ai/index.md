@@ -7,13 +7,13 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 # Introduction
 
 - AI system은 여러 곳에서 사용되고 있음
-    - Face ID, 자율주행 차, 의학 이미지 분석
+  - Face ID, 자율주행 차, 의학 이미지 분석
 - AI system을 더 잘 *이해하는 것*이 점점 더 중요해지고 있음.
-    - 스마트폰 유저는 빠른 잠금 해제를 위해 얼굴을 어느 위치에 위치시켜야 하는지 이해하고 싶어함
-    - researcher는 어떠한 특수한 결정이 차 사고를 일으키는지 알고 싶어함
-    - radiologist는 특정한 진단을 내릴때 이미지의 어떤 부분을 보는지 알고 싶어함
+  - 스마트폰 유저는 빠른 잠금 해제를 위해 얼굴을 어느 위치에 위치시켜야 하는지 이해하고 싶어함
+  - researcher는 어떠한 특수한 결정이 차 사고를 일으키는지 알고 싶어함
+  - radiologist는 특정한 진단을 내릴때 이미지의 어떤 부분을 보는지 알고 싶어함
 - 기존의 explainable AI(XAI) 연구는 사람들의 이해를 돕기 위해 AI system에 대한 투명성을 제공하고자 했지만, end-user의 관점에서 이루어지지는 않았음
-    - Vision 분야를 보면 XAI 방법론들은 실제 사용자의 필요성 보다는, researcher가 할 수 있는 것에 초점이 맞춰져 있음
+  - Vision 분야를 보면 XAI 방법론들은 실제 사용자의 필요성 보다는, researcher가 할 수 있는 것에 초점이 맞춰져 있음
 - 본 논문은 real-world 관점에서 다음 3가지 research question에 답하고자 함
 
 ### Research Question
@@ -25,17 +25,17 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/79ad7823-bf64-4a6e-ac39-0334608f9531/837178a4-a5a2-4fbe-a805-9efc156f96fe/Untitled.png)
 
 - 이를 위해 Merlin이라는 AI 기반 스마트폰 어플리케이션 사용자를 탐구
-    - 유저가 업로드한 사진 및 audio를 통해 새를 분류해주는 app
-    - AI Backgorund / Domain(Birding) Background를 기준으로 20명의 사용자를 인터뷰
+  - 유저가 업로드한 사진 및 audio를 통해 새를 분류해주는 app
+  - AI Backgorund / Domain(Birding) Background를 기준으로 20명의 사용자를 인터뷰
 - XAI 연구와 end-user를 연결하기 위해 4가지 XAI 방법론을 사용
-    - heatamp, example, concept, prototype-based explanation
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/79ad7823-bf64-4a6e-ac39-0334608f9531/82941402-1a73-4454-809b-bf6b7fd6e9b0/Untitled.png)
-    
-    - 사용자가 어떤 의도로 XAI 설명을 사용하고자 하는지, 각 방법을 어떻게 인식하는지를 확인
+
+  - heatamp, example, concept, prototype-based explanation
+
+  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/79ad7823-bf64-4a6e-ac39-0334608f9531/82941402-1a73-4454-809b-bf6b7fd6e9b0/Untitled.png)
+
+  - 사용자가 어떤 의도로 XAI 설명을 사용하고자 하는지, 각 방법을 어떻게 인식하는지를 확인
 
 - 이를 통해 다음과 같은 사실을 발견함
-    
     <aside>
     1️⃣ 사용자의 XAI needs는 각 사용자의 domain/AI background와 관심사에 따라 달라짐.
     
@@ -64,7 +64,6 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
     
     - 위 발견을 기반으로 human-ai colloboration을 위한 중간다리로서 XAI의 잠재력에 대해 논의하고, future XAI design에 대해 제안하고자 함.
     - 다른 case study와 마찬가지로, generalizability가 제한된 측면이 있지만, 깊이 있는 이해를 위한 의도적인 trade-off임
-    
 
 # Related Works
 
@@ -82,19 +81,19 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 ### XAI Method for Computer VIsion
 
 - post-hoc vs interpretable-by-design
-    - post-hoc : explain already-trained-models
-    - nterpretable-by-design : explicitly-interpretalbe reasoning process
+  - post-hoc : explain already-trained-models
+  - nterpretable-by-design : explicitly-interpretalbe reasoning process
 - global vs local
 - different form
-    - heatmaps, examples, concepts, prototypes
+  - heatmaps, examples, concepts, prototypes
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/79ad7823-bf64-4a6e-ac39-0334608f9531/0c43ba88-efd6-4655-916a-6e59e6227127/Untitled.png)
 
 # Study Application: Merlin Bird Identification APP
 
 - 다음 조건을 만족하는 application 선정
-    - 다양한 birding, AI knowledge를 가진 사용자들을 보유한 새 분류 application
-    - AI 모델을 사용
+  - 다양한 birding, AI knowledge를 가진 사용자들을 보유한 새 분류 application
+  - AI 모델을 사용
 - Mock-up explanation을 제공
 
 # Method
@@ -117,13 +116,13 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 
 - XAI Question Back 질문지 사용
 - XAI와 관련된 위 질문에서
-    - know the answer to / curious to know (more) 에 해당하는 질문을 선택
-    - 실제 정답을 알 수 없는 경우(data size 둥)에 대해서는 일정 수준 추정이 가능한지를 파악
+  - know the answer to / curious to know (more) 에 해당하는 질문을 선택
+  - 실제 정답을 알 수 없는 경우(data size 둥)에 대해서는 일정 수준 추정이 가능한지를 파악
 
 ### XAI uses and perceptions
 
 - 실제 Merlin의 판독 결과와 Mock-up XAI 예시를 같이 보여줌
-    - Heatmap / Example / Concept / Prototype
+  - Heatmap / Example / Concept / Prototype
 
 # Results
 
@@ -137,22 +136,23 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 ### 1. 1. 사용자는 일반적으로 AI System의 detail에 대해 궁금해하지만, 이는 AI Background나 Domain 관심도에 따라 달라짐
 
 - Merlin은 내재된 기술의 세부사항을 제공하지 않음
-- 참가자는 일반적으로 AI system의 세부사항(Data, Performance,  Output 등)에 대한 궁금증을 가지고 있지만, 호기심을 충족하기 위해 큰 노력을 기울이고자 하진 앟음
+- 참가자는 일반적으로 AI system의 세부사항(Data, Performance, Output 등)에 대한 궁금증을 가지고 있지만, 호기심을 충족하기 위해 큰 노력을 기울이고자 하진 앟음
 - 하지만 high-AI background를 가지고 있거나, domain에 대한 관심이 높을 경우 AI의 세부사항에 대해 적극적으로 알고 싶어함.
 
 ### 1. 2. 사용자는 AI와 상호작용을 향상시킬 수 있는 정보를 필요로함
 
 - system detail에 대한 호기심은 background에 따라 달라지지만, AI system과의 상호작용- 을 위한 실용적인 정보에 대한 필요성은 모두가 요구함
-1. AI의 capabilities 와 limitations 
-    1. 이를 통해 특정한 결과가 신뢰할만한지를 알 수 있을 뿐만 아니라 최적의 결과를 얻기 위한 더 나은 input을 입력하는데 도움을 줄 수있음
-    2. 사용자는 이와 같은 정보를 얻기위해 AI의 한계를 테스트하고 ( 잘못된 정보 입력하는 등 ), 이를 통해 AI가 언제 동작하고 언제 실패하는지를 이해하고자 함
-    3. 더한 경우는 일부 입력을 조정함으로써(특정 정보 누락, audio recording clip) AI의 출력에 영향을 미치는 요소를 파악하고자 함
+
+1. AI의 capabilities 와 limitations
+   1. 이를 통해 특정한 결과가 신뢰할만한지를 알 수 있을 뿐만 아니라 최적의 결과를 얻기 위한 더 나은 input을 입력하는데 도움을 줄 수있음
+   2. 사용자는 이와 같은 정보를 얻기위해 AI의 한계를 테스트하고 ( 잘못된 정보 입력하는 등 ), 이를 통해 AI가 언제 동작하고 언제 실패하는지를 이해하고자 함
+   3. 더한 경우는 일부 입력을 조정함으로써(특정 정보 누락, audio recording clip) AI의 출력에 영향을 미치는 요소를 파악하고자 함
 2. AI의 confidence
-    1. 언제 AI의 결과를 신뢰해야할지를 결정하기 위한 정보
-    2. score가 제공되지 않을 경우, 결과가 ‘얼마나’ 정확한지를 알기가 어려움
+   1. 언제 AI의 결과를 신뢰해야할지를 결정하기 위한 정보
+   2. score가 제공되지 않을 경우, 결과가 ‘얼마나’ 정확한지를 알기가 어려움
 3. More detailed Outputs
-    1. audio를 기반으로 새의 종을 판단할 때, 전체 sound에서 어떤 부분을 기준으로 선택되었는지
-    2. 사운드의 종류를 제공 (새 울음 juvenile calls, fock calls, and alarm calls) 
+   1. audio를 기반으로 새의 종을 판단할 때, 전체 sound에서 어떤 부분을 기준으로 선택되었는지
+   2. 사운드의 종류를 제공 (새 울음 juvenile calls, fock calls, and alarm calls)
 
 - 종합적으로, 사용자는 실제 사용시, 사용자의 사용성을 향상시킬 수 있는 정보(특히 출력에 대한 신뢰도를 알 수 있는)를 요구함.
 
@@ -173,34 +173,28 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 - AI를 teacher와 같이 봄: AI가 보고 있는 feature를 explanation을 통해 배우고, 동일한 feature를 보고자함
 - 전문가가 보는 관점과 AI가 보는 관점이 다를 수 있고, AI가 대상을 구별하는 새로운 방식이 있다면 이에 흥미를 느낌 ( 그럼에도, 사용자는 사람과 비슷한 형태의 explanation을 선호하는 경향이 있긴 함)
 - 심지어 domain에 대한 높은 지식을 가지고 있는 전문가도, explanation이 가지는 교육적 가치에 높은 평가를 내림
-    
-    > Potential of learning from AI via XAI explanations
-    > 
+  > Potential of learning from AI via XAI explanations
 - 이러한 use case는 전문적 AI system으로서의 Merlin App의 특수성으로 인한 것일 수 있음
-    - 많은 AI application은 일반적으로 사람이 쉽게 할 수 있는 일을 자동화하는데 초점을 둔 반면, Merlin은 일반적인 사용자가 가지고 있지 않은(+ 관련 지식을 얻기 위해 시간을 투자하기 힘든) 전문성을 기반으로 하고 있음.
-    - 즉 다른 타입의 application에서는 explnataion을 통한 학습 요구가 크지 않을 듯
+  - 많은 AI application은 일반적으로 사람이 쉽게 할 수 있는 일을 자동화하는데 초점을 둔 반면, Merlin은 일반적인 사용자가 가지고 있지 않은(+ 관련 지식을 얻기 위해 시간을 투자하기 힘든) 전문성을 기반으로 하고 있음.
+  - 즉 다른 타입의 application에서는 explnataion을 통한 학습 요구가 크지 않을 듯
 
 ### 2.3 사용자는 explanation을 더 나은 AI-collaborators가 되기 위한 기회로 여김
 
 - 사용자는 그들의 행동에 대한 feedback을 통해 AI task를 더 잘 수행하고자 함
-    
-    > What would I have to do to change this photo to make it [AI] understand it better
-    > 
+  > What would I have to do to change this photo to make it [AI] understand it better
 - 그들 스스로의 colloborative skill을 향상시킬 수 있는 기회를 원함. 결국 사용자가 원하는 건 가능한 최고의 결과를 얻는 것이기 때문
 - 이 관점에서 일부 사용자는 heatamp과 example의 효용에 대한 의문을 제기함.
-    - 이러한 설명이 흥미로운건 사실이지만, 이게 미래에 사용자에게 도움을 줄 수 있을까?
-    - 사용자의 app 사용 방식을 바꿀 수 있는( AI를 더 정확하게 사용할 수 있는) 접근법이 필요함.
-    - General Workflow : 사용자 경험을 통해 어떤 구도, 어떠한 채광으로 사진을 입력했을 때 정확한 결과가 나오는지를 파악하고, 더 나은 결과를 얻기 위해 이를 적용함.
+  - 이러한 설명이 흥미로운건 사실이지만, 이게 미래에 사용자에게 도움을 줄 수 있을까?
+  - 사용자의 app 사용 방식을 바꿀 수 있는( AI를 더 정확하게 사용할 수 있는) 접근법이 필요함.
+  - General Workflow : 사용자 경험을 통해 어떤 구도, 어떠한 채광으로 사진을 입력했을 때 정확한 결과가 나오는지를 파악하고, 더 나은 결과를 얻기 위해 이를 적용함.
 - 사용자는 AI를 일종의 협업자(collobrator)로 여김. 그들은 이미 더 잘 협업하기 위한 방식을 찾고 있고, XAI explnation을 더 잘 협업하기 위한 의도로 사용함
-    - 따라서 더 나은 Input을 제공할 수 있는 actionable한 feedback을 원함
+  - 따라서 더 나은 Input을 제공할 수 있는 actionable한 feedback을 원함
 
 ### 2.4 사용자는 explanation을 AI를 개선하고 개발자에게 피드백을 주기위한 중간 단계로 여김
 
 - high-AI background를 가진 경우
 - end-user에게 더 많은 정보를 제공함으로써, 더 구체적인 feedback을 받을 수 있음, 이는 AI system을 향상시키는데 도움을 줄 수 있음
-    
-    > 만약 사용자로 하여금 새를 구분하도록 가르치는게 app의 목적이고 이를 달성한다면, 이후에는 사용자를 통해 데이터를 분류하여 app을 발전 시키는게 가능함.
-    > 
+  > 만약 사용자로 하여금 새를 구분하도록 가르치는게 app의 목적이고 이를 달성한다면, 이후에는 사용자를 통해 데이터를 분류하여 app을 발전 시키는게 가능함.
 
 ## 3. XAI perceptions
 
@@ -220,15 +214,13 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 - 긍정/부정 의견이 많이 갈림
 - AI가 실수한 경우를 파악하기가 쉬움
 - 하지만 대부분은 heatamp이 정보가 부족하고 조악한 방식(coarse)이라 생각함
-    
-    > *“It’s just highlighting the bird”*
-    > 
+  > _“It’s just highlighting the bird”_
 - 좀 더 세부적인 요서를 표시한다면 더 나을 것 같다고 생각함
 - 일부 사용자는 heatmap의 태생적인 한계점을 가지고 있다고 생각함
-    - 중요한 부분을 표시하는건 알겠지만 “왜” 중요한지에 대한 답을 알 수 없음
-    - 어떠한 부분이 중요한지 아는 건 미래 사용시 사용자의 행동을 변화시키는데 도움이 안됨
+  - 중요한 부분을 표시하는건 알겠지만 “왜” 중요한지에 대한 답을 알 수 없음
+  - 어떠한 부분이 중요한지 아는 건 미래 사용시 사용자의 행동을 변화시키는데 도움이 안됨
 
-### 3.2.  Example-based
+### 3.2. Example-based
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/79ad7823-bf64-4a6e-ac39-0334608f9531/c0dc15f6-f03a-444e-a68f-cc5e2871ccac/Untitled.png)
 
@@ -245,11 +237,11 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 - 사용자 대부분이 긍정적으로 평가함
 - part-based 형식 ( 결과를 chunk로 분해하여 설명하는) 방식이 사람과 비슷하다고 생각함
 - AI 결과를 더 철저하게 체크할 수 있음. (각각의 concept에 대해 사람들이 동의하는 바가 달라질 수 있음)
-    - 만약 red-feather가 있다고 했는데 없을 경우 추론 과정이 잘못되었다는걸 알 수 있음
-    - score가 나오는 점도 긍정적으로 평가함
+  - 만약 red-feather가 있다고 했는데 없을 경우 추론 과정이 잘못되었다는걸 알 수 있음
+  - score가 나오는 점도 긍정적으로 평가함
 - 개선 사항
-    - concept이 너무 일반적(general)임, 더 specific하면 좋을 것 같다
-    - coefficent(score)의 의미가 모호함 (1.7이 좋은 건지?)
+  - concept이 너무 일반적(general)임, 더 specific하면 좋을 것 같다
+  - coefficent(score)의 의미가 모호함 (1.7이 좋은 건지?)
 - 시각적인 자료에 비해 덜 매력적임
 
 ### 3.4 Prototype-base
@@ -259,23 +251,23 @@ spoiler: 'Understanding How Explainability Can Support Human-AI Interaction'
 - 가장 선호되는 방식, 대부분의 사용자가 가장 좋은 방식으로 선택함
 - concept 기반보다 더 시각적임
 - 다양한 방식으로 사용 가능함
-    - 학습하기 좋음
-    - AI 동작 방식을 이해하기 쉬움
-    - 실수를 파악하기 쉬움
-    - 추후 더 나은 input을 제공하는데도 도움이됨
+  - 학습하기 좋음
+  - AI 동작 방식을 이해하기 쉬움
+  - 실수를 파악하기 쉬움
+  - 추후 더 나은 input을 제공하는데도 도움이됨
 - 개선 사항
-    - 특정 부분(ex 발)이 큰 의미가 없어 보임
+  - 특정 부분(ex 발)이 큰 의미가 없어 보임
 
 → 몇몇 사용자는 prototype 방식을 다른 방식 (heatamp, concep, explanation)과 결합하는 방식을 제안함
 
 ### 3.5 Cocerns about XAI explanations
 
 1. 사용자 입장에서는 XAI 결과를 얼마나 신뢰할 수 있을지에 대한 고민이 있음
-    - 얼마나 정직하게 explanation을 제공할 것인가?
-        - example-base: 실제로 그렇지 않더라도, AI가 단순히 비슷한 이미지를 clustering해서 결과를 보여준다는 인상을 줌
-    - XAI explanation이 실제로 보여주는 것에 대해 소통하는 것의 중요성
-        - XAI explanation을 설명(meta-explanation)하는게 XAI explanation 자체보다 복잡할 수 있음
+   - 얼마나 정직하게 explanation을 제공할 것인가?
+     - example-base: 실제로 그렇지 않더라도, AI가 단순히 비슷한 이미지를 clustering해서 결과를 보여준다는 인상을 줌
+   - XAI explanation이 실제로 보여주는 것에 대해 소통하는 것의 중요성
+     - XAI explanation을 설명(meta-explanation)하는게 XAI explanation 자체보다 복잡할 수 있음
 2. explanation이 불신 또는 과한 믿음을 줄 가능성
-    - 잘못된 예측에 대한 설득력있는 설명이 오히려 사용자에게 해로울 수 있음
-        - 사용자가 쉽게 믿게 되고, 잘못된 정보를 축적할 수 있음
-    - 잘못된 예측 + 잘못된 설명 → 모델 feedback 등에서 부정적인 영향을 더 키울 수 있음
+   - 잘못된 예측에 대한 설득력있는 설명이 오히려 사용자에게 해로울 수 있음
+     - 사용자가 쉽게 믿게 되고, 잘못된 정보를 축적할 수 있음
+   - 잘못된 예측 + 잘못된 설명 → 모델 feedback 등에서 부정적인 영향을 더 키울 수 있음

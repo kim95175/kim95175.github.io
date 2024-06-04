@@ -4,10 +4,10 @@ import * as React from 'react';
 
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
-
 import { Button } from '@ui/button';
 import { cn } from '@utils/utils';
+
+import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons';
 
 /* eslint-disable react/jsx-no-constructed-context-values */
 

@@ -1,3 +1,9 @@
+/* eslint-disable no-return-await */
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+/* eslint-disable prefer-template */
+
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { NextResponse } from 'next/server';
 
