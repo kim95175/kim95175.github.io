@@ -25,6 +25,9 @@
       "@hooks/*": [
         "./src/hooks/*"
       ],
+      "@ui/*": [
+        "./src/ui/*"
+      ],
     },
     "target": "es6",
     "lib": [
