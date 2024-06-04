@@ -19,7 +19,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
   let postComponents = {};
   try {
-    postComponents = await import(`../../../../../public/post/${params.slug}/components.tsx`);
+    postComponents = await import(`./public/post/${params.slug}/components.tsx`);
   } catch (e) {
     throw new Error('No components.tsx found');
   }

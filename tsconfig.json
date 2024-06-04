@@ -9,7 +9,8 @@
       "@core/*": ["./src/core/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@ui/*": ["./src/ui/*"]
+      "@ui/*": ["./src/ui/*"],
+      "@post/*": ["./public/post/*"]
     },
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
