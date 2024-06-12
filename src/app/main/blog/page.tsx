@@ -1,5 +1,6 @@
 'use client';
 
+// https://react-slideshow-image.netlify.app/?path=/docs/introduction--page
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
