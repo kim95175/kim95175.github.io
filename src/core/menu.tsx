@@ -11,6 +11,12 @@ const mainMenu = [
     description: 'Cleared Game List',
     link: '/main/game',
   },
+  {
+    image: '/music/NakedHeart.jpeg',
+    title: 'Test',
+    description: '개발중',
+    link: '/main/test',
+  },
 ];
 
 export default mainMenu;
