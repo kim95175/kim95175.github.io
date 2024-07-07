@@ -1,5 +1,4 @@
 // import Image, { ImageProps } from 'next/image';
-
 import type { MDXComponents } from 'mdx/types';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
