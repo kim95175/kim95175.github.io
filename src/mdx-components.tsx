@@ -1,4 +1,4 @@
-import Image, { ImageProps } from 'next/image';
+// import Image, { ImageProps } from 'next/image';
 
 import type { MDXComponents } from 'mdx/types';
 
@@ -68,18 +68,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </pre>
     ),
-    img: (props: ImageProps) => (
-      <Image
-        sizes="100vw"
-        style={{
-          width: '100%',
-          height: 'auto',
-          borderRadius: '8px',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        }}
-        {...props}
-      />
-    ),
+    // img: (props: ImageProps) => (
+    //   <Image
+    //     sizes="100vw"
+    //     style={{
+    //       width: '100%',
+    //       height: 'auto',
+    //       borderRadius: '8px',
+    //       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    //     }}
+    //     {...props}
+    //   />
+    // ),
     table: ({ children }) => (
       <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem' }}>
         {children}
